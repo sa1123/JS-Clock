@@ -1,19 +1,28 @@
 function currentTime() {
     var date = new Date();
     var hour = date.getHours();
-    if(hour<10){
-        hour = "0" + hour;
-    }
+    hour = addLeadingZero(hour);
     var min = date.getMinutes();
-    if(min<10){
-        min = "0" + min;
-    }
+    min = addLeadingZero(min);
     var sec = date.getSeconds();
-    if(sec<10){
-        sec = "0" + sec;
-    }
-    document.getElementById("clock").innerHTML = hour + " : " + min + " : " + sec;
+    sec = addLeadingZero(sec);
+
+    var ampm = getAMPM(hour);
+
+    document.getElementById("clock").innerHTML = hour + " : " + min + " : " + sec + " : " + ampm;
     var t = setTimeout(function(){ currentTime() }, 1000);
+}
+
+function addLeadingZero(t) {
+    if(t<10){
+        return "0" + t;
+    } else {
+        return t;
+    }
+}
+
+function getAMPM(hour) {
+    return (hour >= 12) ? "PM" : "AM";
 }
 
 currentTime();
