@@ -9,7 +9,8 @@ function currentTime() {
 
     var ampm = getAMPM(hour);
 
-    document.getElementById("clock").innerHTML = hour + " : " + min + " : " + sec + " : " + ampm;
+    document.getElementById("clock-time").innerHTML = hour + " : " + min + " : " + sec;
+    document.getElementById("clock-ampm").innerHTML = ampm;
     var t = setTimeout(function(){ currentTime() }, 1000);
 }
 
