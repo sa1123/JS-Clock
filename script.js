@@ -7,10 +7,7 @@ function currentTime() {
     var sec = date.getSeconds();
     sec = addLeadingZero(sec);
 
-    var ampm = getAMPM(hour);
-
     document.getElementById("clock-time").innerHTML = hour + " : " + min + " : " + sec;
-    document.getElementById("clock-ampm").innerHTML = ampm;
     var t = setTimeout(function(){ currentTime() }, 1000);
 }
 
@@ -20,10 +17,6 @@ function addLeadingZero(t) {
     } else {
         return t;
     }
-}
-
-function getAMPM(hour) {
-    return (hour >= 12) ? "PM" : "AM";
 }
 
 currentTime();
