@@ -4,7 +4,6 @@ Digital Clock made using Javascript
 
 <img src="ss.png">
 
+<!-- On hover: -->
 
-On hover:
-
-<img src="hover_ss.png">
+<!-- <img src="hover_ss.png"> -->

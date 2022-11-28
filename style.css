@@ -3,7 +3,6 @@ body {
 }
 
 .clock {
-    color: #66ff99;
     font-size: 100px;
     text-align: center;
     padding-top: 40px;
@@ -13,11 +12,17 @@ body {
 }
 
 #clock-time {
-    border: solid #66ff99;
+    color: red;
+    border: solid blue;
     padding: 1.5rem;
 }
 
-#clock-ampm {
+#clock-time:hover {
+    color: #66ff99;
+    border: solid #66ff99;
+}
+
+/* #clock-ampm {
     color: blue;
 }
 
@@ -25,4 +30,4 @@ body {
     color: red;
     border: solid blue;
     padding: 0.75rem;
-}
+} */
